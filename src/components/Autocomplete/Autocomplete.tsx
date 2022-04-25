@@ -6,7 +6,7 @@ export interface Option {
 	name?: string;
 }
 
-const AutocompleteLoading = () => <div className="loader" />;
+const AutocompleteLoading = () => <div className="loader" data-testid="loader" />;
 
 interface Result {
 	option: Option;
@@ -97,7 +97,7 @@ export const Autocomplete = (props: Autocomplete) => {
 	};
 
 	return (
-		<div className="autocomplete__wrapper" ref={refWrapper}>
+		<div data-testid="autocomplete-wrapper" className="autocomplete__wrapper" ref={refWrapper}>
 			<input
 				className="autocomplete__input"
 				autoComplete="off"
